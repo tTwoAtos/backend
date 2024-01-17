@@ -1,15 +1,17 @@
 import { NestFactory } from "@nestjs/core";
 import {
     FastifyAdapter,
-    NestFastifyApplication
+    NestFastifyApplication,
 } from "@nestjs/platform-fastify";
 import { AppModule } from "./app.module";
 
 async function bootstrap() {
     const app = await NestFactory.create<NestFastifyApplication>(
         AppModule,
-        new FastifyAdapter()
+        new FastifyAdapter(),
     );
+
     await app.listen(3000);
+    console.log(`App launched on ${await app.getUrl()}`);
 }
 bootstrap();

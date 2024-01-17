@@ -1,15 +1,11 @@
-import { Test, TestingModule } from "@nestjs/testing";
+import { HttpService } from "@nestjs/axios";
 import { OpenFoodFactService } from "./open-food-fact.service";
 
 describe("OpenFoodFactService", () => {
     let service: OpenFoodFactService;
 
     beforeEach(async () => {
-        const module: TestingModule = await Test.createTestingModule({
-            providers: [OpenFoodFactService]
-        }).compile();
-
-        service = module.get<OpenFoodFactService>(OpenFoodFactService);
+        service = new OpenFoodFactService(new HttpService());
     });
 
     it("should be defined", () => {
