@@ -1,4 +1,4 @@
-import { ProductService } from "src/services/product/product.service";
+import { ProductService } from "../../services/product/product.service";
 import { ProductController } from "./product.controller";
 
 describe("ProductController", () => {

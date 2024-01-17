@@ -17,8 +17,8 @@ export class OpenFoodFactService {
                     console.log(error);
 
                     throw new HttpException(
-                        error.response.statusText,
-                        error.response.status,
+                        error?.response?.statusText,
+                        error?.response?.status,
                     );
                 }),
             ),

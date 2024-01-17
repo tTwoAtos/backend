@@ -1,7 +1,7 @@
 import { HttpService } from "@nestjs/axios";
 import { Injectable } from "@nestjs/common";
-import { Product } from "src/interfaces/stock/product.interface";
 import { OpenFoodFactService } from "../open-food-fact/open-food-fact.service";
+import { Product } from "./../../interfaces/stock/product.interface";
 
 @Injectable()
 export class ProductService {
