@@ -1,8 +1,8 @@
 import { HttpModule } from "@nestjs/axios";
 import { Module } from "@nestjs/common";
 import { ConfigModule } from "@nestjs/config";
-import databaseConfig from "./configs/database.config";
-import globalConfig from "./configs/global.config";
+import databaseConfig from "./controllers/configs/database.config";
+import globalConfig from "./controllers/configs/global.config";
 import { ProductController } from "./controllers/stock/product.controller";
 import { OpenFoodFactService } from "./services/open-food-fact/open-food-fact.service";
 import { ProductService } from "./services/product/product.service";
