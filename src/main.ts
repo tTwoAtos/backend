@@ -15,7 +15,7 @@ async function bootstrap() {
     // Automaticaly launch data validation
     app.useGlobalPipes(new ValidationPipe());
 
-    await app.listen(3000);
+    await app.listen(3001);
     console.log(`App launched on ${await app.getUrl()}`);
 }
 bootstrap();
