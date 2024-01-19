@@ -14,6 +14,9 @@ async function bootstrap() {
 
     // Automaticaly launch data validation
     app.useGlobalPipes(new ValidationPipe());
+    app.enableCors({
+        origin: ["*"],
+    });
 
     await app.listen(3001);
     console.log(`App launched on ${await app.getUrl()}`);
